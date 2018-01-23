@@ -5,3 +5,11 @@ Last Update: Tutorial is now using Composer only
 You can find the tutorial at:
 
 https://doctrine-orm.readthedocs.org/en/latest/tutorials/getting-started.html
+
+You can run the complete tutorial with a script:
+
+    ./tutorial.sh
+
+And there is a flag to print the SQL statements during the script execution:
+
+    SQL_LOGGER=1 ./tutorial.sh

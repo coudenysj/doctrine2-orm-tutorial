@@ -10,6 +10,10 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
 //$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), $isDevMode);
 //$config = Setup::createXMLMetadataConfiguration(array(__DIR__."/config/xml"), $isDevMode);
 
+if (getenv('SQL_LOGGER')) {
+    $config->setSQLLogger(new SQLLogger());
+}
+
 // database configuration parameters
 $conn = array(
     'driver' => 'pdo_sqlite',
