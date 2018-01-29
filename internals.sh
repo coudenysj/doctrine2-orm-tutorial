@@ -12,10 +12,12 @@ function execute {
     echo
     $1
     echo
-    #read -p "${purple}Press enter to continue${reset}"
+    read -p "${purple}Press enter to continue${reset}"
+    clear
     echo
 }
 
+clear
 echo -e "${red}Make sure ./tutorial.sh has been executed${reset}"
 
 execute 'cat identity_map.php'
