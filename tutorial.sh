@@ -11,9 +11,12 @@ function execute {
     echo
     $1
     echo
+    #read -p "${purple}Press enter to continue${reset}"
+    #clear
     echo
 }
 
+#clear
 execute "composer install"
 execute "vendor/bin/doctrine orm:schema-tool:drop --force"
 execute "vendor/bin/doctrine orm:schema-tool:create"
