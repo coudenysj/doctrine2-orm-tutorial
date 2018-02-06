@@ -14,6 +14,20 @@ if (getenv('SQL_LOGGER')) {
     $config->setSQLLogger(new SQLLogger());
 }
 
+$factory = new \Doctrine\ORM\Cache\DefaultCacheFactory(
+    new \Doctrine\ORM\Cache\RegionsConfiguration(),
+    new \Doctrine\Common\Cache\FilesystemCache(
+        __DIR__ . '/data'
+    )
+);
+
+// Enable second-level-cache
+$config->setSecondLevelCacheEnabled();
+
+// Cache factory
+$config->getSecondLevelCacheConfiguration()
+    ->setCacheFactory($factory);
+
 // database configuration parameters
 $conn = array(
     'driver' => 'pdo_sqlite',

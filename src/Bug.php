@@ -34,6 +34,7 @@ class Bug
     protected $reporter;
 
     /**
+     * @Cache("NONSTRICT_READ_WRITE")
      * @ManyToMany(targetEntity="Product")
      */
     protected $products;

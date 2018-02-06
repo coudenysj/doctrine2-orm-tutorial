@@ -1,6 +1,7 @@
 <?php
 /**
  * @Entity(readOnly=true) @Table(name="products")
+ * @Cache(usage="READ_ONLY", region="product_region")
  */
 class Product
 {
