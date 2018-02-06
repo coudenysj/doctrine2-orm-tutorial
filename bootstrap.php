@@ -14,10 +14,6 @@ if (getenv('SQL_LOGGER')) {
     $config->setSQLLogger(new SQLLogger());
 }
 
-if (getenv('SQL_LOGGER')) {
-    $config->setSQLLogger(new SQLLogger());
-}
-
 // database configuration parameters
 $conn = array(
     'driver' => 'pdo_sqlite',
