@@ -1,6 +1,6 @@
 <?php
 /**
- * @Entity @Table(name="products")
+ * @Entity(readOnly=true) @Table(name="products")
  */
 class Product
 {
